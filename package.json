@@ -1,0 +1,25 @@
+{
+  "name": "ecom_store",
+  "version": "1.0.0",
+  "description": "this is the ecom store website , which can perform curd operation have validation mechanism as well as it also has session and login and sign in facilities",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "go": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Adarsh",
+  "license": "ISC",
+  "devDependencies": {
+    "cookie": "^0.6.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.1",
+    "parser": "^0.1.4",
+    "winston": "^3.12.0"
+  }
+}
