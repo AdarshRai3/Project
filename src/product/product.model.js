@@ -37,12 +37,12 @@ export default class ProductModel{
         );
 
         if(!user){
-            return 'UserId not Found';
+            throw new Error ('UserId not Found');
         }
         const products =this.getAll();
         const product = products.find((p)=>p.id===productId);
         if(!product){
-            return 'productId not found';
+            throw new Error ('productId not found');
         }
         if(!product.ratings){
              product.ratings=[];

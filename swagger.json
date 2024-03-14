@@ -1,0 +1,8 @@
+{
+    "endpoints": [
+      {
+        "path": "/users",
+        "method": "GET"
+      }
+    ]
+  }
