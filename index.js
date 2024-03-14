@@ -5,6 +5,7 @@ import session from 'express-session'
 import cookieParser from 'cookie-parser'
 import productRouter from './src/product/product.routes.js'
 import userRouter from './src/user/user.routes.js'
+import cartRouter from './src/cart/cart.routes.js'
 
 
 const app = express();
@@ -12,6 +13,7 @@ const Port = 3500;
 
 app.use('/api/products',productRouter);
 app.use('/api/users',userRouter);
+app.use('/api/cart', cartRouter);
 app.get('/',(req,res)=>{
     try{
         res.send("Welcome to e-commerce store API");
