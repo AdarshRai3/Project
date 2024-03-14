@@ -1,6 +1,8 @@
 import {MongoClient} from 'mongodb';
+import dotenv from 'dotenv';
 
-const url = 'mongodb://localhost:27017/ecomDb';
+dotenv.config();
+const url = process.env.DB_URL;
 
 const connectToMongoDB = async()=>{
     try{

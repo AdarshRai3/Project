@@ -1,4 +1,6 @@
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+dotenv.config();
 
 const jwtAuth =(request,response,next)=>{
 const token = request.headers['authorization'];
@@ -8,7 +10,7 @@ const token = request.headers['authorization'];
     }
 
     try{
-        const payload = jwt.verify(token,'PMy/Iyg3EUY98gSW+S/yA7J68PmeWsDAIWB756A6fwM');
+        const payload = jwt.verify(token,process.env.JWT_SECRET);
         console.log(payload);
 
     }catch(err){

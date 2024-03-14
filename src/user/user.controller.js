@@ -1,5 +1,7 @@
 import UserModel from "./user.model.js"
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export default class UserController{
     signUp(request,response){
@@ -35,7 +37,7 @@ export default class UserController{
                     userID: result.id,
                     email:result.email,
                 },
-                'PMy/Iyg3EUY98gSW+S/yA7J68PmeWsDAIWB756A6fwM',
+                process.env.JWT_SECRET ,
                 {
                     expiresIn:'1h'
                 }

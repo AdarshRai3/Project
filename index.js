@@ -22,7 +22,7 @@ app.use('/api/cart', cartRouter);
 app.use(cors());
 app.use('api/docs',swagger.serve ,swagger.setup(apiDocs));
 app.use((req,res)=>{
-    res.status(404).send("API not found,.Please check our documentation for more information at localhost:3200/api-docs");
+    res.status(404).send("API not found.Please check our documentation for more information at localhost:3200/api-docs");
 })
 app.get('/',(req,res)=>{
     try{
