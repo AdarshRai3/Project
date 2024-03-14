@@ -8,7 +8,7 @@ import userRouter from './src/user/user.routes.js'
 import cartRouter from './src/cart/cart.routes.js'
 import apiDocs from './swagger.json' assert {type: 'json'};
 import cors from 'cors';
-import connectToMongoDB from './src/config/mongodb.js'
+import connectToMongoDB from './src/config/database.connection.js'
 import swagger from 'swagger-ui-express';
 
 
@@ -35,5 +35,5 @@ app.get('/',(req,res)=>{
 
 app.listen(Port,()=>{
     console.log("server is running on port 3500");
-    connectToMongoDB();
+    connectToMongoDB;
 })
