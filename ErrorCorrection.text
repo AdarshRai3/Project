@@ -1,3 +1,7 @@
 1>the first error I get is module not found error , this is due to not using .js extension with path in import statement
 2>The next error is that in user constroller , var user array should be outside of class component 
 3>require a call back function can be resolved by making a instance of the function that has been inported const userCOntroller = new userController
+4>Port is already listen to something else error.
+sudo lsof -t -i:Port
+sudo kill -9 PID
+5> Unable to connect to DB : Just go to mogodb database webiste , database access and edit the password and go to vs code , mongodb connect and the fill the url.
